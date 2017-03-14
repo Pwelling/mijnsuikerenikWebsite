@@ -1,0 +1,64 @@
+AppBundle\Entity\Menus:
+    type: entity
+    repositoryClass: MenusRepository
+    table: menus
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        type:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: '0=geen link,1=pagina, 2=pagina groep'
+        itemid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: itemId
+        parentid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: parentId
+        text:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                comment: 'De weergegeven text'
+        target:
+            type: boolean
+            nullable: false
+            options:
+                comment: '0=zelfde scherm, 1=ander scherm'
+                default: '0'
+        url:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        createdAt:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: created_at
+        updatedAt:
+            type: datetime
+            nullable: false
+            options:
+                default: '0000-00-00 00:00:00'
+            column: updated_at
+    lifecycleCallbacks: {  }

@@ -1,0 +1,11 @@
+index:
+  path:     /
+  defaults: { _controller: AppBundle:Page:index }
+page:
+  path: /pagina/{slug}/
+  methods: [GET]
+  defaults: { _controller: AppBundle:Page:page }
+group:
+  path: /groep/{slug}/
+  methods: [GET]
+  defaults: { _controller: AppBundle:Group:index }

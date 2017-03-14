@@ -1,0 +1,10 @@
+.subheading {
+    font-weight: bolder;
+}
+.navbar-custom .nav li a,div .navbar-header .navbar-brand, .site-heading h1, .subheading{
+    color: #1b6d85;
+}
+hr.small {
+    border-top-color: #1b6d85;
+    border-bottom-color: #1b6d85;
+}
